@@ -31,19 +31,30 @@ const Form = () => {
 
   // send from  information to the server
   const handleSubmit = (e) => {
+
+    alert(`
+     This From wil not work | 
+     I have created only functionality
+     for sending email from server |
+     you can check  the code server: 
+     https://github.com/Faruks23/markall_server"
+     and post functionality  in client side
+
+    `);
+   
       e.preventDefault();
 //  fetch  methods for  post request
-    fetch("", {
+    fetch("http://localhost:5000/sendEmail", {
       method: "POST",
-      headers:{
-        'content-type': 'application/json',
+      headers: {
+        "content-type": "application/json",
       },
-      body:JSON.stringify(inputValues)
+      body: JSON.stringify(inputValues),
     })
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         console.log(data);
-      })
+      });
     
  
   }
