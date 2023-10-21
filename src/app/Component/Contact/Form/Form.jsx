@@ -5,12 +5,14 @@ const Form = () => {
   const [isFocused, setIsFocused] = useState([false, false, false, false]);
   const [inputValues, setInputValues] = useState(["", "", "", ""]);
 
+  // handle focus
   const handleFocus = (index) => {
     const newIsFocused = [...isFocused];
     newIsFocused[index] = true;
     setIsFocused(newIsFocused);
   };
 
+  // handle  bluer
   const handleBlur = (index, e) => {
     if (e.target.value === "") {
       const newIsFocused = [...isFocused];
@@ -19,17 +21,33 @@ const Form = () => {
     }
   };
 
+  // handle input changes
   const handleInputChange = (index, value) => {
     const newInputValues = [...inputValues];
     newInputValues[index] = value;
     setInputValues(newInputValues);
   };
 
+
+  // send from  information to the server
   const handleSubmit = (e) => {
       e.preventDefault();
-    console.log(inputValues);
+//  fetch  methods for  post request
+    fetch("", {
+      method: "POST",
+      headers:{
+        'content-type': 'application/json',
+      },
+      body:JSON.stringify(inputValues)
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+      })
+    
+ 
   }
-console.log(inputValues);
+
 
   const InputName = ["Name", "Email", "Phone", "Message"];
 
@@ -65,7 +83,7 @@ console.log(inputValues);
         ))}
         <button
           type="submit"
-          className="px-[40px] py-[16px] bg-[#2F80ED] text-white  rounded text-[18px] font-[500]"
+          className="md:px-[40px] px-[20px] py-[16px] bg-[#2F80ED] text-white  rounded text-[18px] font-[500]"
         >
           {" "}
           Submit Form

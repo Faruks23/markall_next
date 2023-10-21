@@ -6,16 +6,16 @@ const HeroSection = () => {
 
   return (
     <div className="  bg-[#000] w-full h-[1024px]   rounded-tl-[0px] rounded-tr-[0px] rounded-bl-[100px] rounded-br-[0px] flex items-center">
-      <div className="hr-content w-full md:flex container mx-auto">
-        <div className="left-content w-[700px]">
-          <h1 className="text-[70px] font-[700] text-[#FFF] leading-normal">
-            Reach your - <br /> audience & convert bg your leads{" "}
+      <div className="hr-content w-full md:flex container mx-auto  px-2 md:px-0">
+        <div className="left-content md:w-[700px]  md:mt-0 mt-[-60px]">
+          <h1 className="md:text-[70px] md:font-[700] text-[40px] font-[600] text-[#FFF] leading-normal">
+            Reach your - <br /> audience & convert bg your leads
           </h1>
-          <p className=" text-[25px] text-[#FFF] font-[400] mt-[48px]">
+          <p className=" md:text-[25px] text-[22px] text-[#FFF] font-[400] md:mt-[48px] mt-8">
             Get your customers with SEO, rank your business with <br />
             email marketing, build sales leads
           </p>
-          <div className="button flex gap-[44px] items-center mt-[40px]">
+          <div className="button flex md:gap-[44px] items-center mt-[40px] gap-5 mb-5 md:mb-0">
             <button className=" bg-[#7CEDA1] font-[Montserrat] text-[20px] font-[700]  px-[19px] py-[10px] rounded-[10px] text-black capitalize">
               get start
             </button>

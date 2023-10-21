@@ -2,19 +2,19 @@ import React from 'react';
 
 const Review = () => {
   return (
-    <div className="mt-[82px] bg-[#FFFBEE] pl-[37px] pt-[50px]">
+    <div className="mt-[82px] bg-[#FFFBEE] md:pl-[37px] pt-[50px] px-3 md:px-0">
       <div className=" md:flex  justify-between ">
         <div className="">
-          <h3 className="text-[25px] font-[500] text-[#000]">
+          <h3 className="md:text-[25px] text-[22px]  font-[500] text-[#000]">
             OUR HAPPY CUSTOMERS
           </h3>
-          <h1 className="text-[50px] font-[700] text-[#000] leading-normal">
-            What our customers <br /> say about us
+          <h1 className="md:text-[50px] font-[700] text-[#000] leading-normal text-[35px]">
+            What our customers <br className=' hidden md:flex' /> say about us
           </h1>
-          <hr className="w-[553px]   text-[#000]" />
+          <hr className="md:w-[553px]   text-[#000]" />
         </div>
         <div className=" relative ">
-          <div className="pt-[200px] ml-[-60px]">
+          <div className="md:pt-[200px] ml-[-60px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="50"
@@ -29,7 +29,7 @@ const Review = () => {
               />
             </svg>
           </div>
-          <p className="w-[599px] text-[25px] font-[500]">
+          <p className="md:w-[599px] text-[25px] font-[500]">
             Lorem ipsum dolor sit amet consectetur. In praesent ac sit
             scelerisque lacus. Faucibus tincidunt commodo mi.
           </p>
